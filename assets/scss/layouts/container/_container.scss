@@ -9,7 +9,9 @@
     max-width: layout("max") + ($container-padding * 4);
     padding: 0 $container-padding;
     position: relative;
+    padding :0 0rem!important;
     width: layout("fixed");
+    
 
     @include breakpoint("large") {
         padding: 0 ($container-padding * 4);
