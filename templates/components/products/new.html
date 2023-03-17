@@ -1,10 +1,6 @@
 <h2 class="page-heading">{{lang 'products.new' }}</h2>
-
-<ul data-product-type="new"  {{#if settings.data_tag_enabled}} data-list-name="New Products" {{/if}}>
-{{#each products}}
-<li class="product">
-    {{>components/products/customcard settings=../settings theme_settings=../theme_settings customer=../customer event="list" position=(add @index 1)}}
-   
-</li>
-{{/each}}
-</ul>
+{{#if settings.data_tag_enabled}}
+    {{> components/products/carousel products=products list="New Products"}}
+{{else}}
+    {{> components/products/carousel products=products}}
+{{/if}}
