@@ -1838,6 +1838,7 @@ img {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  text-decoration: none;
 }
 #aa-product-category .aa-sidebar .aa-sidebar-widget .tag-cloud {
   display: block;
@@ -1855,6 +1856,7 @@ img {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  text-decoration: none;
 }
 #aa-product-category .aa-sidebar .aa-sidebar-widget .aa-sidebar-price-range {
   display: inline;

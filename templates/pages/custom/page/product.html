@@ -1,13 +1,32 @@
----
+<!-- ---
+
 products:
-new:
-    limit: 3
-featured:
-    limit: 3
-top_sellers:
-    limit: 3
+    new:
+        limit: 2
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    men:
+    limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: 3
+
+        carousel: {{theme_settings.homepage_show_carousel}}
 
 ---
+
+
+
+
+---
+
+category:
+    shop_by_price: true
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+
+ 
+
+--- -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,11 +78,11 @@ top_sellers:
 
 <body class="productPage">
   <!-- wpf loader Two -->
-  <!-- <div id="wpf-loader-two">          
+  <div id="wpf-loader-two">          
       <div class="wpf-loader-two-inner">
         <span>Loading</span>
       </div>
-    </div>  -->
+    </div> 
   <!-- / wpf loader Two -->
   <!-- SCROLL TOP BUTTON -->
   <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
@@ -117,7 +136,8 @@ top_sellers:
                 </form> -->
                 <div class="aa-sort-form">
                   <form class="actionBar" method="get" data-sort-by="product">
-                    {{> components/category/sort-box sort=sort}}
+                    <!-- {{> components/category/sort-box sort=sort}} -->
+                    {{> components/products/filter sort=pagination.category.sort}}
                   </form>
                 </div>
                 <form action="" class="aa-show-form">
@@ -260,7 +280,24 @@ top_sellers:
                 <li><a href="">Sports</a></li>
                
               </ul> -->
-              <ul class="aa-catg-nav">
+              <ul class="aa-catg-nav{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
+                 {{#each categories}}
+                  <li >
+                    {{#if ../theme_settings.navigation_design '===' 'simple'}}
+                    {{> components/common/navigation-list}}
+                    {{/if}}
+                    {{#if ../theme_settings.navigation_design '===' 'alternate'}}
+                    {{> components/common/navigation-list-alternate}}
+                    {{/if}}
+                  </li>
+                  {{/each}}
+                  {{#unless theme_settings.hide_content_navigation}}
+                  {{#each pages}}
+                  {{/each}}
+                  {{/unless}}
+                </ul>
+
+              <!-- <ul class="aa-catg-nav">
                 <li>
                   <a href="/shop-all/" aria-label="Shop All">
                     Shop All
@@ -291,7 +328,7 @@ top_sellers:
                     Utility
                   </a>
                 </li>
-              </ul>
+              </ul> -->
 
             </div>
             <!-- single sidebar -->
@@ -343,7 +380,9 @@ top_sellers:
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
               <h3>Recently Views</h3>
-              {{>components/products/new products=category.products}}
+              {{>components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+              
+              <!-- {{>components/products/new products=category.products}} -->
               <!-- <div class="aa-recently-views">
                 <ul>
                   <li>
@@ -373,7 +412,9 @@ top_sellers:
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
               <h3>Top Rated Products</h3>
-              {{> components/products/new products=category.products }}
+             
+              {{>components/products/customtop products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+            
               <!-- <div class="aa-recently-views">
                 <ul>
                   <li>
