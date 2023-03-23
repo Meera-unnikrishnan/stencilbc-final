@@ -11,7 +11,7 @@ export default function (secureBaseUrl, cartId) {
     const loadingClass = 'is-loading';
     const $cart = $('[data-cart-preview]');
     const $cartDropdown = $('#cart-preview-dropdown');
-    const $cartLoading = $('<div class="loadingOverlay"></div>');
+    const $cartLoading = $('<div class="loadingOverlay">loading</div>');
 
     const $body = $('body');
 
@@ -35,10 +35,11 @@ export default function (secureBaseUrl, cartId) {
             localStorage.setItem('cart-quantity', quantity);
         }
     });
-
-    $cart.on('click', event => {
+let data=[];
+    $cart.on('mouseover', event => {
+        console.log("mousehover")
         const options = {
-            template: 'common/cart-preview',
+            template: 'cart/customcart-preview',
         };
 
         // Redirect to full cart page
@@ -50,20 +51,36 @@ export default function (secureBaseUrl, cartId) {
         }
 
         event.preventDefault();
-
+if(data.length===0){
+    $cartDropdown
+    .addClass(loadingClass)
+    .html($cartLoading);
+$cartLoading
+    .show();
+    console.log("inside if looop")
+    utils.api.cart.getContent(options, (err, response) => {
         $cartDropdown
-            .addClass(loadingClass)
-            .html($cartLoading);
+            .removeClass(loadingClass)
+            .html(response);
         $cartLoading
-            .show();
+            .hide();
+            data=response;
+            console.log(data)
+    });
 
-        utils.api.cart.getContent(options, (err, response) => {
-            $cartDropdown
-                .removeClass(loadingClass)
-                .html(response);
-            $cartLoading
-                .hide();
-        });
+}else{
+    console.log("outside if looop")
+    utils.api.cart.getContent(options, (err, response) => {
+        $cartDropdown
+            .removeClass(loadingClass)
+            .html(response);
+        $cartLoading
+            .hide();
+            data=response;
+    });
+}
+      
+        
     });
 
     let quantity = 0;

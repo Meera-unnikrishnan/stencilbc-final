@@ -1,38 +1,4 @@
-<!-- <a href="#main-content" class="skip-to-main-link">{{lang 'header.skip_to_main'}}</a>
-{{#if banners.top}}
 
-<div class="banners" data-banner-location="top">
-    {{#each (limit banners.top_metadata 1)}}
-    <div class="banner" data-event-type="promotion" data-entity-id="{{this.id}}" data-name="{{this.banner-name}}" data-position="{{this.location}}" data-banner-id="{{this.banner-name}}">
-        <div data-event-type="promotion-click">
-            {{{this.content}}}
-        </div>
-    </div>
-    {{/each}}
-</div>
-{{/if}}
-<header class="header" role="banner">
-    <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
-        <span class="mobileMenu-toggleIcon">Toggle menu</span>
-    </a>
-    {{> components/common/navigation}}
-
-    {{#if page_type '===' 'default'}}
-        <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
-        </h1>
-    {{else}}
-        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
-        </div>20px
-    {{/if}}
-    <div class="navPages-container" id="menu" data-menu>
-        {{> components/common/navigation-menu}}
-    </div>
-    {{{region name="header_navigation_bottom--global"}}}
-</header>
-{{{region name="header_bottom--global"}}}
-{{{region name="header_bottom"}}} -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,9 +12,10 @@
     {{{stylesheet '/assets/css/theme.css'}}}   
 
  
-
-    <link href="../../../../assets/custom/css/font-awesome.css" rel="stylesheet">
-    <link href="../../../../assets/custom/css/bootstrap.css" rel="stylesheet">
+    <link href="{{cdn '../../../../assets/custom/css/style.css'}}" rel="stylesheet">
+    <link href="{{cdn '../../../../assets/custom/css/font-awesome.css'}}" rel="stylesheet">
+    <link href="{{cdn '../../../.assets/custom/css/bootstrap.css'}}" rel="stylesheet">
+   
     
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -66,11 +33,7 @@
   </head>
   <body> 
   
-    <!-- <div id="wpf-loader-two">          
-      <div class="wpf-loader-two-inner">
-        <span>Loading</span>
-      </div>
-    </div>  -->
+   
    
   <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
@@ -95,8 +58,8 @@
                       <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <li><a href="#"><img src="../../assets/custom/img/flag/french.jpg" alt="">FRENCH</a></li>
-                      <li><a href="#"><img src="../../assets/custom/img/flag/english.jpg" alt="">ENGLISH</a></li>
+                      <li><a href="#"><img src="{{cdn '../../assets/custom/img/flag/french.jpg'}}" alt="">FRENCH</a></li>
+                      <li><a href="#"><img src="{{cdn '../../assets/custom/img/flag/english.jpg'}}" alt="">ENGLISH</a></li>
                     </ul>
                   </div>
                 </div>
@@ -127,9 +90,15 @@
                 <ul class="aa-head-top-nav-right">
                   <li><a href="account.html">My Account</a></li>
                   <li class="hidden-xs"><a href="wishlist.html">Wishlist</a></li>
-                  <li class="hidden-xs"><a href="cart.html">My Cart</a></li>
-                  <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>
-                  <li><a href="" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                  <li class="hidden-xs"><a href="cart.php">My Cart</a></li>
+                  <li class="hidden-xs"><a href="checkout">Checkout</a></li>
+                  <!-- <li><a href="{{urls.auth.login}}" >Login</a></li> -->
+               
+                  <li>{{>pages/custom/page/custom-navigation}}</li>
+                  <li>
+                  
+               
+              </li>
                 </ul>
               </div>
             </div>
@@ -147,54 +116,29 @@
             <div class="aa-header-bottom-area">
               <!-- logo  -->
               <div class="aa-logo">
-                <!-- Text based logo -->
-                <!-- <a href="index.html">
-                  <span class="fa fa-shopping-cart"></span>
-                  <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
-                </a> -->
-                <!-- img based logo -->
-                
+               
                 <a href="/"><img src="{{cdn '../../../../assets/custom/img/logo.jpg'}}"  alt="logo img"></a>
               </div>
               <!-- / logo  -->
                <!-- cart box -->
+               
               <div class="aa-cartbox">
-                <a class="aa-cart-link" href="#">
-                  <span class="fa fa-shopping-basket"></span>
-                  <span class="aa-cart-title">SHOPPING CART</span>
-                  <span class="aa-cart-notify">2</span>
-                </a>
-                <div class="aa-cartbox-summary">
-                  <ul>
-                    <li>
-                      <a class="aa-cartbox-img" href="#"><img src="../../assets/custom/img/woman-small-2.jpg" alt="img"></a>
-                      <div class="aa-cartbox-info">
-                        <h4><a href="#">Product Name</a></h4>
-                        <p>1 x ₹250</p>
-                      </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
-                    </li>
-                    <li>
-                      <a class="aa-cartbox-img" href="#"><img src="../../assets/custom/img/woman-small-1.jpg" alt="img"></a>
-                      <div class="aa-cartbox-info">
-                        <h4><a href="#">Product Name</a></h4>
-                        <p>1 x ₹250</p>
-                      </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
-                    </li>                    
-                    <li>
-                      <span class="aa-cartbox-total-title">
-                        Total
-                      </span>
-                      <span class="aa-cartbox-total-price">
-                        ₹500
-                      </span>
-                    </li>
-                  </ul>
-                  <a class="aa-cartbox-checkout aa-primary-btn" href="checkout.html">Checkout</a>
-                </div>
-              </div>
-              <!-- / cart box -->
+              <a class="aa-cart-link"
+              data-cart-preview
+              data-dropdown="cart-preview-dropdown"
+              href="{{urls.cart}}" 
+              aria-label="{{lang 'cart.nav_aria_label'}}"
+              >
+              <span class="fa fa-shopping-basket"></span>
+              <span class="aa-cart-title">SHOPPING CART</span>
+               <span class="aa-cart-notify countPill cart-quantity"></span>
+              </a>
+              <div class="aa-cartbox-summary"> 
+              <div class="dropdown-menus" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true">
+            </div>
+            </div>
+            </div>
+
               <!-- search box -->
               <div class="aa-search-box">
                 <form action="">
@@ -210,6 +154,7 @@
     </div>
     <!-- / header bottom  -->
   </header>
+
   <!-- / header section -->
   <!-- menu -->
   <section >
@@ -219,22 +164,22 @@
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="../../assets/custom/js/bootstrap.js"></script>
+  <script src="../../../../assets/custom/js/bootstrap.js"></script>
   <!-- SmartMenus jQuery plugin -->
-  <script type="text/javascript" src="../../assets/custom/js/jquery.smartmenus.js"></script>
+  <script type="text/javascript" src="../../../../assets/custom/js/jquery.smartmenus.js"></script>
   <!-- SmartMenus jQuery Bootstrap Addon -->
-  <script type="text/javascript" src="../../assets/custom/js/jquery.smartmenus.bootstrap.js"></script>
+  <script type="text/javascript" src="../../../../assets/custom/js/jquery.smartmenus.bootstrap.js"></script>
   <!-- To Slider JS -->
-  <script src="../../assets/custom/js/sequence.js"></script>
-  <script src="../../assets/custom/js/sequence-theme.modern-slide-in.js"></script>
+  <script src="../../../../assets/custom/js/sequence.js"></script>
+  <script src="../../../../assets/custom/js/sequence-theme.modern-slide-in.js"></script>
   <!-- Product view slider -->
-  <script type="text/javascript" src="../../assets/custom/js/jquery.simpleGallery.js"></script>
-  <script type="text/javascript" src="../../assets/custom/js/jquery.simpleLens.js"></script>
+  <script type="text/javascript" src="../../../../assets/custom/js/jquery.simpleGallery.js"></script>
+  <script type="text/javascript" src="../../../../assets/custom/js/jquery.simpleLens.js"></script>
   <!-- slick slider -->
-  <script type="text/javascript" src="../../assets/custom/js/slick.js"></script>
+  <script type="text/javascript" src="../../../../assets/custom/js/slick.js"></script>
   <!-- Price picker slider -->
-  <script type="text/javascript" src="../../assets/custom/js/nouislider.js"></script>
+  <script type="text/javascript" src="../../../../assets/custom/js/nouislider.js"></script>
   <!-- Custom js -->
-  <script src="../../assets/custom/js/custom.js"></script>
+  <script src="../../../../assets/custom/js/custom.js"></script>
   </body>
   </html>

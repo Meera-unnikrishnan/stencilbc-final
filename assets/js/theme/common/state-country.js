@@ -134,11 +134,11 @@ export default function (stateElement, context = {}, options, callback) {
             }
 
             const $currentInput = $('[data-field-type="State"]');
-
+         
             if (!_.isEmpty(response.data.states)) {
                 // The element may have been replaced with a select, reselect it
                 const $selectElement = makeStateRequired($currentInput, context);
-
+             
                 addOptions(response.data, $selectElement, options);
                 callback(null, $selectElement);
             } else {

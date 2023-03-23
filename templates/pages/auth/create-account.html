@@ -1,6 +1,7 @@
 {{inject 'passwordRequirements' settings.password_requirements}}
 {{inject 'recaptchaTitle' (lang 'create_account.recaptcha_title')}}
 {{#partial "page"}}
+
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
     <h1 class="page-heading">{{lang 'create_account.heading' }}</h1>
 
@@ -19,7 +20,7 @@
                             {{{dynamicComponent 'components/common/forms'}}}
                         {{/each}}
                         {{inject 'required' (lang 'common.required')}}
-                        {{inject 'state_error' (lang 'errors.state_error')}}
+                        <!-- {{inject 'state_error' (lang 'errors.state_error')}} -->
                     </div>
                     {{{ forms.create_account.recaptcha.markup}}}
                     <div class="form-actions">

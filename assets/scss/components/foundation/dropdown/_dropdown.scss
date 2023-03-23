@@ -21,14 +21,27 @@
     &.is-open {
         display: block;
     }
-
+    &.hover {
+        display: block;
+    }
     .button {
         &:focus {
             z-index: $zIndex-lowest;
         }
     }
 }
-
+.dropdown-menus {
+    
+    &.is-loading .loadingOverlay {
+        background: none;
+        padding: (spacing("double") + spacing("single")) 0;
+        position: relative;
+    }
+    &.focus {
+        display: block;
+    }
+   
+}
 .dropdown-menu-item {
     text-align: left;
 

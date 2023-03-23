@@ -41,6 +41,8 @@ category:
   <link href="../../../../assets/custom/css/font-awesome.css" rel="stylesheet">
   <!-- Bootstrap -->
   <link href="../../../../assets/custom/css/bootstrap.css" rel="stylesheet">
+  
+
   {{{stylesheet '/assets/css/customtheme.css'}}}
   {{{stylesheet '/assets/css/theme.css'}}}
 
@@ -78,11 +80,11 @@ category:
 
 <body class="productPage">
   <!-- wpf loader Two -->
-  <div id="wpf-loader-two">          
-      <div class="wpf-loader-two-inner">
-        <span>Loading</span>
-      </div>
-    </div> 
+  <div id="wpf-loader-two">
+    <div class="wpf-loader-two-inner">
+      <span>Loading</span>
+    </div>
+  </div>
   <!-- / wpf loader Two -->
   <!-- SCROLL TOP BUTTON -->
   <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
@@ -280,22 +282,23 @@ category:
                 <li><a href="">Sports</a></li>
                
               </ul> -->
-              <ul class="aa-catg-nav{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
-                 {{#each categories}}
-                  <li >
-                    {{#if ../theme_settings.navigation_design '===' 'simple'}}
-                    {{> components/common/navigation-list}}
-                    {{/if}}
-                    {{#if ../theme_settings.navigation_design '===' 'alternate'}}
-                    {{> components/common/navigation-list-alternate}}
-                    {{/if}}
-                  </li>
-                  {{/each}}
-                  {{#unless theme_settings.hide_content_navigation}}
-                  {{#each pages}}
-                  {{/each}}
-                  {{/unless}}
-                </ul>
+              <ul
+                class="aa-catg-nav{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
+                {{#each categories}}
+                <li>
+                  {{#if ../theme_settings.navigation_design '===' 'simple'}}
+                  {{> components/common/navigation-list}}
+                  {{/if}}
+                  {{#if ../theme_settings.navigation_design '===' 'alternate'}}
+                  {{> components/common/navigation-list-alternate}}
+                  {{/if}}
+                </li>
+                {{/each}}
+                {{#unless theme_settings.hide_content_navigation}}
+                {{#each pages}}
+                {{/each}}
+                {{/unless}}
+              </ul>
 
               <!-- <ul class="aa-catg-nav">
                 <li>
@@ -380,8 +383,9 @@ category:
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
               <h3>Recently Views</h3>
-              {{>components/products/customnew products=products.new columns=theme_settings.homepage_new_products_column_count}}
-              
+              {{>components/products/customnew products=products.new
+              columns=theme_settings.homepage_new_products_column_count}}
+
               <!-- {{>components/products/new products=category.products}} -->
               <!-- <div class="aa-recently-views">
                 <ul>
@@ -412,9 +416,10 @@ category:
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
               <h3>Top Rated Products</h3>
-             
-              {{>components/products/customtop products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
-            
+
+              {{>components/products/customtop products=products.top_sellers
+              columns=theme_settings.homepage_top_products_column_count}}
+
               <!-- <div class="aa-recently-views">
                 <ul>
                   <li>
