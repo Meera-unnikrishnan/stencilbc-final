@@ -1,5 +1,13 @@
 ---
 carousel: {{theme_settings.homepage_show_carousel}}
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: {{theme_settings.homepage_top_products_count}}
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -12,8 +20,8 @@ carousel: {{theme_settings.homepage_show_carousel}}
     {{{stylesheet '/assets/css/customtheme.css'}}}
     {{{stylesheet '/assets/css/theme.css'}}}   
 
-    <link href="../../assets/custom/css/bootstrap.css" rel="stylesheet">
-    <link href="../../assets/custom/css/font-awesome.css" rel="stylesheet">
+    <link href="{{cdn '../../../../assets/custom/css/bootstrap.css'}}" rel="stylesheet">
+    <link href="{{cdn '../../../../assets/custom/css/font-awesome.css'}}" rel="stylesheet">
 
     <!-- Google Font -->
     
@@ -72,7 +80,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
               <div class="col-md-5 no-padding">                
                 <div class="aa-promo-left">
                   <div class="aa-promo-banner">                    
-                    <img src="{{cdn 'assets/custom/img/women.jpg'}}" alt="img">                    
+                    <img src="{{cdn '../../../../assets/custom/img/women.jpg'}}" alt="img">                    
                     <div class="aa-prom-content">
                       <span>75% Off</span>
                       <h4><a href="#">For Women</a></h4>                      
@@ -85,7 +93,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                 <div class="aa-promo-right">
                   <div class="aa-single-promo-right">
                     <div class="aa-promo-banner">                      
-                      <img src="{{cdn 'assets/custom/img/men1.jpg'}}" alt="img">                      
+                      <img src="{{cdn '../../../../assets/custom/img/men1.jpg'}}" alt="img">                      
                       <div class="aa-prom-content">
                         <span>Exclusive Item</span>
                         <h4><a href="#">For Men</a></h4>                        
@@ -94,7 +102,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                   </div>
                   <div class="aa-single-promo-right">
                     <div class="aa-promo-banner">                      
-                      <img src="{{cdn 'assets/custom/img/shoe1.jpg'}}" alt="img">                      
+                      <img src="{{cdn '../../../../assets/custom/img/shoe1.jpg'}}" alt="img">                      
                       <div class="aa-prom-content">
                         <span>Sale Off</span>
                         <h4><a href="#">On Shoes</a></h4>                        
@@ -103,7 +111,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                   </div>
                   <div class="aa-single-promo-right">
                     <div class="aa-promo-banner">                      
-                      <img src="{{cdn 'assets/custom/img/kids.jpg'}}" alt="img">                      
+                      <img src="{{cdn '../../../../assets/custom/img/kids.jpg'}}" alt="img">                      
                       <div class="aa-prom-content">
                         <span>New Arrivals</span>
                         <h4><a href="#">For Kids</a></h4>                        
@@ -112,7 +120,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                   </div>
                   <div class="aa-single-promo-right">
                     <div class="aa-promo-banner">                      
-                      <img src="{{cdn 'assets/custom/img/bag.jpg'}}" alt="img">                      
+                      <img src="{{cdn '../../../../assets/custom/img/bag.jpg'}}" alt="img">                      
                       <div class="aa-prom-content">
                         <span>25% Off</span>
                         <h4><a href="#">For Bags</a></h4>                        
@@ -174,7 +182,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -192,7 +200,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                      <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -210,7 +218,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/Tshirt1.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Tshirt1.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                       <figcaption>
                         <h4 class="aa-product-title"><a href="#">T-Shirt</a></h4>
@@ -228,7 +236,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -244,7 +252,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -260,7 +268,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -278,7 +286,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/Tshirt1.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Tshirt1.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -296,7 +304,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
@@ -328,7 +336,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -346,7 +354,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                      <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -364,7 +372,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/Tshirt1.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Tshirt1.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                       <figcaption>
                         <h4 class="aa-product-title"><a href="#">T-Shirt</a></h4>
@@ -382,7 +390,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -398,7 +406,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -414,7 +422,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -432,7 +440,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/Tshirt1.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Tshirt1.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -450,7 +458,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
@@ -476,7 +484,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="{{cdn 'assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -494,7 +502,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                      <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="../../assets/custom/img/Top.jpg" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -512,7 +520,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="../../assets/custom/img/Tshirt1.jpg" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Tshirt1.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                       </figure>
                       <figcaption>
@@ -530,7 +538,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="../../assets/custom/img/Top.jpg" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -546,7 +554,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="../../assets/custom/img/poloTshirt.jpg" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -562,7 +570,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="../../assets/custom/img/Top.jpg" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Top.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                         <figcaption>
                           <h4 class="aa-product-title"><a href="#">Lorem ipsum doller</a></h4>
@@ -580,7 +588,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="../../assets/custom/img/Tshirt1.jpg" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/Tshirt1.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
@@ -598,7 +606,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                     <!-- start single product item -->
                     <li>
                       <figure>
-                        <a class="aa-product-img" href="#"><img src="../../assets/custom/img/poloTshirt.jpg" alt="polo shirt img"></a>
+                        <a class="aa-product-img" href="#"><img src="{{cdn '../../../../assets/custom/img/poloTshirt.jpg'}}" alt="polo shirt img"></a>
                         <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                          <figcaption>
                           <h4 class="aa-product-title"><a href="#">This is Title</a></h4>
@@ -671,7 +679,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
               <!-- single slide -->
               <li>
                 <div class="aa-testimonial-single">
-                <img class="aa-testimonial-img" src="../../assets/custom/img/testlogo.jpg" alt="testimonial img">
+                <img class="aa-testimonial-img" src="{{cdn '../../../../assets/custom/img/testlogo.jpg'}}" alt="testimonial img">
                   <span class="fa fa-quote-left aa-testimonial-quote"></span>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt distinctio omnis possimus, facere, quidem qui!consectetur adipisicing elit. Sunt distinctio omnis possimus, facere, quidem qui.</p>
                   <div class="aa-testimonial-info">
@@ -684,11 +692,11 @@ carousel: {{theme_settings.homepage_show_carousel}}
               <!-- single slide -->
               <li>
                 <div class="aa-testimonial-single">
-                <img class="aa-testimonial-img" src="../../assets/custom/img/testlogo.jpg" alt="testimonial img">
+                <img class="aa-testimonial-img" src="{{cdn '../../../../assets/custom/img/testlogo.jpg'}}" alt="testimonial img">
                   <span class="fa fa-quote-left aa-testimonial-quote"></span>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt distinctio omnis possimus, facere, quidem qui!consectetur adipisicing elit. Sunt distinctio omnis possimus, facere, quidem qui.</p>
                   <div class="aa-testimonial-info">
-                    <p>KEVIN MEYER</p>
+                    <p>KEVIN MEYER</p>{{> layout/base}}
                     <span>CEO</span>
                     <a href="#">Alphabet</a>
                   </div>
@@ -697,7 +705,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
                <!-- single slide -->
               <li>
                 <div class="aa-testimonial-single">
-                <img class="aa-testimonial-img" src="../../assets/custom/img/testlogo.jpg" alt="testimonial img">
+                <img class="aa-testimonial-img" src="{{cdn '../../../../assets/custom/img/testlogo.jpg'}}" alt="testimonial img">
                   <span class="fa fa-quote-left aa-testimonial-quote"></span>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt distinctio omnis possimus, facere, quidem qui!consectetur adipisicing elit. Sunt distinctio omnis possimus, facere, quidem qui.</p>
                   <div class="aa-testimonial-info">
@@ -727,7 +735,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
               <div class="col-md-4 col-sm-4">
                 <div class="aa-latest-blog-single">
                   <figure class="aa-blog-img">                    
-                    <a href="#"><img src="{{cdn 'assets/custom/img/Lorem.jpg'}}" alt="img"></a>  
+                    <a href="#"><img src="{{cdn '../../../../assets/custom/img/Lorem.jpg'}}" alt="img"></a>  
                       <figcaption class="aa-blog-img-caption">
                       <span href="#"><i class="fa fa-eye"></i>5K</span>
                       <a href="#"><i class="fa fa-thumbs-o-up"></i>426</a>
@@ -746,7 +754,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
               <div class="col-md-4 col-sm-4">
                 <div class="aa-latest-blog-single">
                   <figure class="aa-blog-img">                    
-                    <a href="#"><img src="{{cdn 'assets/custom/img/Lorem.jpg'}}" alt="img"></a>  
+                    <a href="#"><img src="{{cdn '../../../../assets/custom/img/Lorem.jpg'}}" alt="img"></a>  
                       <figcaption class="aa-blog-img-caption">
                       <span href="#"><i class="fa fa-eye"></i>5K</span>
                       <a href="#"><i class="fa fa-thumbs-o-up"></i>426</a>
@@ -765,7 +773,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
               <div class="col-md-4 col-sm-4">
                 <div class="aa-latest-blog-single">
                   <figure class="aa-blog-img">                    
-                    <a href="#"><img src="{{cdn 'assets/custom/img/Lorem.jpg'}}" alt="img"></a>  
+                    <a href="#"><img src="{{cdn '../../../../assets/custom/img/Lorem.jpg'}}" alt="img"></a>  
                       <figcaption class="aa-blog-img-caption">
                       <span href="#"><i class="fa fa-eye"></i>5K</span>
                       <a href="#"><i class="fa fa-thumbs-o-up"></i>426</a>
@@ -794,17 +802,17 @@ carousel: {{theme_settings.homepage_show_carousel}}
         <div class="col-md-12">
           <div class="aa-client-brand-area">
             <ul class="aa-client-brand-slider">
-              <li><a href="#"><img src="{{cdn 'assets/custom/img/client-brand-java.png'}}" alt="java img"></a></li>
-              <li><a href="#"><img src="{{cdn 'assets/custom/img/client-brand-jquery.png'}}" alt="jquery img"></a></li>
-              <li><a href="#"><img src="{{cdn 'assets/custom/img/client-brand-html5.png'}}" alt="html5 img"></a></li>
-              <li><a href="#"><img src="{{cdn 'assets/custom/img/client-brand-css3.png'}}" alt="css3 img"></a></li>
-              <li><a href="#"><img src="{{cdn 'assets/custom/img/client-brand-wordpress.png'}}" alt="wordPress img"></a></li>
-              <li><a href="#"><img src="{{cdn 'assets/custom/img/client-brand-joomla.png'}}" alt="joomla img"></a></li>
-              <li><a href="#"><img src="{{cdn 'assets/custom/img/client-brand-java.png'}}" alt="java img"></a></li>
-              <li><a href="#"><img src="{{cdn 'assets/custom/img/client-brand-jquery.png'}}" alt="jquery img"></a></li>
-              <li><a href="#"><img src="{{cdn 'assets/custom/img/client-brand-html5.png'}}" alt="html5 img"></a></li>
-              <li><a href="#"><img src="{{cdn 'assets/custom/img/client-brand-css3.png'}}" alt="css3 img"></a></li>
-              <li><a href="#"><img src="{{cdn 'assets/custom/img/client-brand-wordpress.png'}}" alt="wordPress img"></a></li>
+              <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/client-brand-java.png'}}" alt="java img"></a></li>
+              <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/client-brand-jquery.png'}}" alt="jquery img"></a></li>
+              <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/client-brand-html5.png'}}" alt="html5 img"></a></li>
+              <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/client-brand-css3.png'}}" alt="css3 img"></a></li>
+              <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/client-brand-wordpress.png'}}" alt="wordPress img"></a></li>
+              <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/client-brand-joomla.png'}}" alt="joomla img"></a></li>
+              <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/client-brand-java.png'}}" alt="java img"></a></li>
+              <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/client-brand-jquery.png'}}" alt="jquery img"></a></li>
+              <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/client-brand-html5.png'}}" alt="html5 img"></a></li>
+              <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/client-brand-css3.png'}}" alt="css3 img"></a></li>
+              <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/client-brand-wordpress.png'}}" alt="wordPress img"></a></li>
             </ul>
           </div>
         </div>
@@ -842,29 +850,29 @@ carousel: {{theme_settings.homepage_show_carousel}}
         </div>                        
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
-    {{> layout/custombase}}
+    {{> layout/base}}
   </div>    
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="../../assets/custom/js/bootstrap.js"></script>
+  <script src="{{cdn '../../../../assets/custom/js/bootstrap.js'}}"></script>
   <!-- SmartMenus jQuery plugin -->
-  <script type="text/javascript" src="../../assets/custom/js/jquery.smartmenus.js"></script>
+  <script type="text/javascript" src="{{cdn '../../../../assets/custom/js/jquery.smartmenus.js'}}"></script>
   <!-- SmartMenus jQuery Bootstrap Addon -->
-  <script type="text/javascript" src="../../assets/custom/js/jquery.smartmenus.bootstrap.js"></script>
+  <script type="text/javascript" src="{{cdn '../../../../assets/custom/js/jquery.smartmenus.bootstrap.js'}}"></script>
   <!-- To Slider JS -->
-  <script src="../../assets/custom/js/sequence.js"></script>
-  <script src="../../assets/custom/js/sequence-theme.modern-slide-in.js"></script>
+  <script src="{{cdn '../../../../assets/custom/js/sequence.js'}}"></script>
+  <script src="{{cdn '../../../../assets/custom/js/sequence-theme.modern-slide-in.js'}}"></script>
   <!-- Product view slider -->
-  <script type="text/javascript" src="../../assets/custom/js/jquery.simpleGallery.js"></script>
-  <script type="text/javascript" src="../../assets/custom/js/jquery.simpleLens.js"></script>
+  <script type="text/javascript" src="{{cdn '../../../../assets/custom/js/jquery.simpleGallery.js'}}"></script>
+  <script type="text/javascript" src="{{cdn '../../../../assets/custom/js/jquery.simpleLens.js'}}"></script>
   <!-- slick slider -->
-  <script type="text/javascript" src="../../assets/custom/js/slick.js"></script>
+  <script type="text/javascript" src="{{cdn '../../../../assets/custom/js/slick.js'}}"></script>
   <!-- Price picker slider -->
-  <script type="text/javascript" src="../../assets/custom/js/nouislider.js"></script>
+  <script type="text/javascript" src="{{cdn '../../../../assets/custom/js/nouislider.js'}}"></script>
   <!-- Custom js -->
-  <script src="../../assets/custom/js/custom.js"></script>
+  <script src="{{cdn '../../../../assets/custom/js/custom.js'}}"></script>
   </body>
 </html>
 

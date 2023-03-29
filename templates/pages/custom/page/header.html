@@ -1,42 +1,34 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title>Daily Shop | Home</title>
-    
-    {{{stylesheet '/assets/css/customtheme.css'}}}
-    {{{stylesheet '/assets/css/theme.css'}}}   
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Shop | Home</title>
 
- 
-    <link href="{{cdn '../../../../assets/custom/css/style.css'}}" rel="stylesheet">
-    <link href="{{cdn '../../../../assets/custom/css/font-awesome.css'}}" rel="stylesheet">
-    <link href="{{cdn '../../../.assets/custom/css/bootstrap.css'}}" rel="stylesheet">
-   
-    
-    <!-- Google Font -->
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    
+  {{{stylesheet '/assets/css/customtheme.css'}}}
+  {{{stylesheet '/assets/css/theme.css'}}}
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  
 
-  </head>
-  <body> 
-  
-   
-   
+  <link href="{{cdn '../../../../assets/custom/css/style.css'}}" rel="stylesheet">
+  <link href="{{cdn '../../../../assets/custom/css/font-awesome.css'}}" rel="stylesheet">
+  <link href="{{cdn '../../../../assets/custom/css/bootstrap.css'}}" rel="stylesheet">
+  <link href="{{cdn '../../../../assets/custom/css/theme-color/default-theme.css'}}" rel="stylesheet">
+
+
+
+  <!-- Google Font -->
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+
   <!-- SCROLL TOP BUTTON -->
-    <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+  <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
   <!-- END SCROLL TOP BUTTON -->
 
 
@@ -53,13 +45,14 @@
                 <!-- start language -->
                 <div class="aa-language">
                   <div class="dropdown">
-                    <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      <img src="../../assets/custom/img/flag/english.jpg" alt="english flag">ENGLISH
+                    <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
+                      <img src="{{cdn '../../../../assets/custom/img/flag/english.jpg'}}" alt="english flag">ENGLISH
                       <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <li><a href="#"><img src="{{cdn '../../assets/custom/img/flag/french.jpg'}}" alt="">FRENCH</a></li>
-                      <li><a href="#"><img src="{{cdn '../../assets/custom/img/flag/english.jpg'}}" alt="">ENGLISH</a></li>
+                      <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/flag/french.jpg'}}" alt="">FRENCH</a></li>
+                      <li><a href="#"><img src="{{cdn '../../../../assets/custom/img/flag/english.jpg'}}" alt="">ENGLISH</a></li>
                     </ul>
                   </div>
                 </div>
@@ -68,7 +61,8 @@
                 <!-- start currency -->
                 <div class="aa-currency">
                   <div class="dropdown">
-                    <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="true">
                       <i class="fa fa-usd"></i>USD
                       <span class="caret"></span>
                     </a>
@@ -88,23 +82,21 @@
               <!-- / header top left -->
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
-                  <!-- <li><a href="account.html">My Account</a></li> -->
-                  <li class="hidden-xs"><a href="wishlist.html">Wishlist</a></li>
-                  <li class="hidden-xs"><a href="cart.php">My Cart</a></li>
-                  <li class="hidden-xs"><a href="checkout">Checkout</a></li>
-                  <!-- <li><a href="{{urls.auth.login}}" >Login</a></li> -->
-               
+
+
                   <li>{{>pages/custom/page/custom-navigation}}</li>
                   <li>
-                  
-               
-              </li>
-              
+
+
+                  </li>
+
                 </ul>
               </div>
             </div>
           </div>
         </div>
+
+
       </div>
     </div>
     <!-- / header top  -->
@@ -117,39 +109,32 @@
             <div class="aa-header-bottom-area">
               <!-- logo  -->
               <div class="aa-logo">
-               
-                <a href="/"><img src="{{cdn '../../../../assets/custom/img/logo.jpg'}}"  alt="logo img"></a>
+
+                <a href="/"><img src="{{cdn '../../../../assets/custom/img/logo.jpg'}}" alt="logo img"></a>
               </div>
               <!-- / logo  -->
-               <!-- cart box -->
-               
+              <!-- cart box -->
+
               <div class="aa-cartbox">
-              <a class="aa-cart-link"
-              data-cart-preview
-              data-dropdown="cart-preview-dropdown"
-              href="{{urls.cart}}" 
-              aria-label="{{lang 'cart.nav_aria_label'}}"
-              >
-              <span class="fa fa-shopping-basket"></span>
-              <span class="aa-cart-title">SHOPPING CART</span>
-               <span class="aa-cart-notify countPill cart-quantity"></span>
-              </a>
-              <div class="aa-cartbox-summary"> 
-              <div class="dropdown-menus" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true">
-            </div>
-            </div>
-            </div>
+                <a class="aa-cart-link" data-cart-preview data-dropdown="cart-preview-dropdown" href="{{urls.cart}}"
+                  aria-label="{{lang 'cart.nav_aria_label'}}">
+                  <span class="fa fa-shopping-basket"></span>
+                  <span class="aa-cart-title">SHOPPING CART</span>
+                  <span class="aa-cart-notify countPill cart-quantity"></span>
+                </a>
+                <div class="aa-cartbox-summary">
+                  <div class="dropdown-menus" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true">
+                  </div>
+                </div>
+              </div>
 
               <!-- search box -->
               <div class="aa-search-box">
-                <!-- <form action="">
-                  <input type="text" name="" id="" placeholder="Search here ex. 'man' ">
-                  <button type="submit"><span class="fa fa-search"></span></button>
-                </form> -->
+
                 {{>components/common/search-box}}
               </div>
-             
-              <!-- / search box -->             
+
+              <!-- / search box -->
             </div>
           </div>
         </div>
@@ -160,29 +145,30 @@
 
   <!-- / header section -->
   <!-- menu -->
-  <section >
+  <section>
     {{>components/common/navigation-menu}}
   </section>
   {{> layout/custombase}}
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="../../../../assets/custom/js/bootstrap.js"></script>
+  <script src="{{cdn '../../../../assets/custom/js/bootstrap.js'}}"></script>
   <!-- SmartMenus jQuery plugin -->
-  <script type="text/javascript" src="../../../../assets/custom/js/jquery.smartmenus.js"></script>
+  <script type="text/javascript" src="{{cdn '../../../../assets/custom/js/jquery.smartmenus.js'}}"></script>
   <!-- SmartMenus jQuery Bootstrap Addon -->
-  <script type="text/javascript" src="../../../../assets/custom/js/jquery.smartmenus.bootstrap.js"></script>
+  <script type="text/javascript" src="{{cdn '../../../../assets/custom/js/jquery.smartmenus.bootstrap.js'}}"></script>
   <!-- To Slider JS -->
-  <script src="../../../../assets/custom/js/sequence.js"></script>
-  <script src="../../../../assets/custom/js/sequence-theme.modern-slide-in.js"></script>
+  <script src="{{cdn '../../../../assets/custom/js/sequence.js'}}"></script>
+  <script src="{{cdn '../../../../assets/custom/js/sequence-theme.modern-slide-in.js'}}"></script>
   <!-- Product view slider -->
-  <script type="text/javascript" src="../../../../assets/custom/js/jquery.simpleGallery.js"></script>
-  <script type="text/javascript" src="../../../../assets/custom/js/jquery.simpleLens.js"></script>
+  <script type="text/javascript" src="{{cdn '../../../../assets/custom/js/jquery.simpleGallery.js'}}"></script>
+  <script type="text/javascript" src="{{cdn '../../../../assets/custom/js/jquery.simpleLens.js'}}"></script>
   <!-- slick slider -->
-  <script type="text/javascript" src="../../../../assets/custom/js/slick.js"></script>
+  <script type="text/javascript" src="{{cdn '../../../../assets/custom/js/slick.js'}}"></script>
   <!-- Price picker slider -->
-  <script type="text/javascript" src="../../../../assets/custom/js/nouislider.js"></script>
+  <script type="text/javascript" src="{{cdn '../../../../assets/custom/js/nouislider.js'}}"></script>
   <!-- Custom js -->
-  <script src="../../../../assets/custom/js/custom.js"></script>
-  </body>
-  </html>
+  <script src="{{cdn '../../../../assets/custom/js/custom.js'}}"></script>
+</body>
+
+</html>
